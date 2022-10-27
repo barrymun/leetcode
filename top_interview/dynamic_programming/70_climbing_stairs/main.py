@@ -1,4 +1,9 @@
 def climb_stairs(n: int) -> int:
+    """
+    utilising memoization
+    :param n:
+    :return:
+    """
     res = 1  # will take at least 1 step
     one, two = 1, 1  # both start from the first step
     for i in range(0, n - 1):
@@ -9,5 +14,5 @@ def climb_stairs(n: int) -> int:
 
 
 if __name__ == '__main__':
-    for i in range(1, 6):
-        print(f'n={i}, res={climb_stairs(n=i)}')
+    for x in range(1, 6):
+        print(f'n={x}, res={climb_stairs(n=x)}')
