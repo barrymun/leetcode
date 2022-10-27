@@ -9,5 +9,5 @@ def climb_stairs(n: int) -> int:
 
 
 if __name__ == '__main__':
-    for n in range(1, 6):
-        print(f'n={n}, res={climb_stairs(n=n)}')
+    for i in range(1, 6):
+        print(f'n={i}, res={climb_stairs(n=i)}')
