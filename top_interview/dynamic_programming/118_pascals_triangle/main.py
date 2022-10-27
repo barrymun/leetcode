@@ -10,10 +10,13 @@ def generate(num_rows: int) -> List[List[int]]:
         return None
     res = [[1]]
     for i in range(1, num_rows):
-        arr = []
-        for j in range(0, len(res[i - 1]) - 1):
-            arr.append(res[i - 1][j] + res[i - 1][j + 1])
-        res.append([1, *arr, 1])
+        # === initial solution ===
+        # arr = []
+        # for j in range(0, len(res[i - 1]) - 1):
+        #     arr.append(res[i - 1][j] + res[i - 1][j + 1])
+        # res.append([1, *arr, 1])
+        # === optimal (4 lines -> 1 line) ===
+        res += [list(map(lambda x, y: x + y, res[-1] + [0], [0] + res[-1]))]
     return res
 
 
